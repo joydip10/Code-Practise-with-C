@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define ACCURACY 0.0001
+int main()
+{
+    int n,count;
+    float x,term,sum;
+    printf("ENTER THE VALUE OF X : ");
+    scanf("%f",&x);
+    n=term=sum=count=1;
+    while(n<100)
+    {
+        term=term*x/n;
+        sum=sum+term;
+        count++;
+        if(term<ACCURACY)
+            n=999;
+        else
+            n++;
+    }
+    printf("SUM=%d\n",(int)sum);
+}
